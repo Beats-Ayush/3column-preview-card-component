@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: "Lexend Deca", sans-serif;
+  min-height: 100vh;
+  font-size: 0.625rem;
+  background-color: var(--Very-light-gray);
+}
+@media screen and (max-width: 60rem) {
+  body {
+    font-size: 0.5rem;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .card {
+  width: 60rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 60rem) {
+  .container .card {
+    max-width: 15.8rem;
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+  }
+}
+.container .card-items-list {
+  display: flex;
+  list-style: none;
+  width: 100%;
+}
+@media screen and (max-width: 60rem) {
+  .container .card-items-list {
+    flex-direction: column;
+  }
+}
+.container .card-items-list .card-item {
+  padding: 3.5rem;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 60rem) {
+  .container .card-items-list .card-item {
+    padding: 2rem;
+  }
+}
+.container .card-items-list .card-item.sedans {
+  background-color: var(--Bright-orange);
+}
+.container .card-items-list .card-item.suvs {
+  background-color: var(--Dark-cyan);
+}
+.container .card-items-list .card-item.luxury {
+  background-color: var(--Very-dark-cyan);
+}
+.container .card-items-list .card-item .icon {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media screen and (max-width: 60rem) {
+  .container .card-items-list .card-item .icon {
+    width: 3rem;
+  }
+}
+.container .card-items-list .card-item .title {
+  text-transform: uppercase;
+  color: var(--Very-light-gray);
+  font-size: 5em;
+  font-family: "Big Shoulders Display", sans-serif;
+  margin: 2rem 0 1.5rem;
+}
+@media screen and (max-width: 60rem) {
+  .container .card-items-list .card-item .title {
+    font-size: 3.5em;
+    margin: 1rem 0 1rem;
+  }
+}
+.container .card-items-list .card-item .summary {
+  font-size: 1.5em;
+  color: var(--Transparent-white);
+  line-height: 1.7;
+  margin-bottom: 4rem;
+}
+@media screen and (max-width: 60rem) {
+  .container .card-items-list .card-item .summary {
+    margin-bottom: 1rem;
+  }
+}
+.container .card-items-list .card-item a {
+  background-color: var(--Very-light-gray);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 4rem;
+  border: 0.2em solid var(--Transparent-white);
+  transition: background-color 0.2s ease;
+}
+@media screen and (max-width: 60rem) {
+  .container .card-items-list .card-item a {
+    border-radius: 3rem;
+  }
+}
+.container .card-items-list .card-item a:hover {
+  background-color: transparent;
+}
+.container .card-items-list .card-item a button {
+  font-size: 1.5em;
+  background-color: transparent;
+  border: none;
+  padding: 0.85rem 2.1rem;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+@media screen and (max-width: 60rem) {
+  .container .card-items-list .card-item a button {
+    padding: 0.6rem 2rem;
+  }
+}
+.container .card-items-list .card-item a button:hover {
+  color: var(--Transparent-white);
+}
+.container .card-items-list .card-item a .sedans {
+  color: var(--Bright-orange);
+}
+.container .card-items-list .card-item a .suvs {
+  color: var(--Dark-cyan);
+}
+.container .card-items-list .card-item a .luxury {
+  color: var(--Very-dark-cyan);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
