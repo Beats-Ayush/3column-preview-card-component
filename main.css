@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
-
 :root {
   --Bright-orange: hsl(31, 77%, 52%);
   --Dark-cyan: hsl(184, 100%, 22%);
@@ -180,7 +179,11 @@ body {
   transform: translateX(-50%);
   font-size: 0.75rem;
 }
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
+@media screen and (max-width: 40rem) {
+  .attribution {
+    display: none;
+  }
 }
+.attribution a {
+  color: #3e52a3;
+}/*# sourceMappingURL=main.css.map */
